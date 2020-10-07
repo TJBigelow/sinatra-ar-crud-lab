@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/articles/<%= @article.id %>">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <input id="title" name="article[title]" type="text" value="<%= @article.title %>">
+    <input id="content" name="article[content]" type="text" value="<%= @article.content %>">
+    <input id="Submit" type="submit">
+    </form>
+</body>
+</html>
